@@ -1,8 +1,6 @@
-import { SET_CURRENT_PRODUCT } from './types'
-
-export const setCurrentProduct = (id) => {
+export const setCurrentProduct = element => {
     return {
-        type: SET_CURRENT_PRODUCT,
-        id
+        type: "SET_CURRENT_PRODUCT",
+        payload: element
     }
-}
+};

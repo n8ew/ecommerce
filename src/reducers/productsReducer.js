@@ -1,5 +1,3 @@
-import { SET_CURRENT_PRODUCT } from '../actions/types'
-
 const initialState = {
     products: [
         {id: 1, head: 'Red squer', body: 'This is red squer. Red is super cool', price: 1, color: 'red'},
@@ -10,22 +8,20 @@ const initialState = {
         {id: 6, head: 'Pink squer', body: 'This is pink squer. Pink is super cool', price: 2.25, color: 'pink'},
     ],
     product: {}
-}
+};
 
 const productsSwitch = (state=initialState,action) => {
     switch(action.type) {
 
-        case SET_CURRENT_PRODUCT:
-            let singleProduct = state.products.filter(element=>{return element.id===action.id})
-            console.log(singleProduct)
+        case "SET_CURRENT_PRODUCT":
             return {
                 ...state,
-                product : singleProduct
+                product: action.payload
             }
 
         default:
             return state
     }
-}
+};
 
-export default productsSwitch
+export default productsSwitch;

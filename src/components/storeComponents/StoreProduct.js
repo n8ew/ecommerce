@@ -1,12 +1,16 @@
 import React from 'react'
-import PropTypes from 'prop-types'
-import { connect } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { setCurrentProduct } from '../../actions/productsActions'
+import { useHistory } from 'react-router-dom'
 
-const StoreProduct = ({ product, setCurrentProduct }) => {
+const StoreProduct = ({ product }) => {
+
+  const dispatch = useDispatch()
+  const history = useHistory()
 
     const handleClick = () => {
-      setCurrentProduct(product.id)
+      dispatch(setCurrentProduct(product))
+      history.push(`/{product.id}`)
     }
 
   return (
@@ -26,14 +30,4 @@ const styles = {
     alignItems: "center"
 }
 
-StoreProduct.propTypes = {
-    setCurrentProduct: PropTypes.func.isRequired
-}
-
-const mapDispatchToProps = dispatch => {
-  return {
-    setCurrentProduct: (id) => dispatch(setCurrentProduct(id))
-  }
-}
-
-export default connect(mapDispatchToProps)(StoreProduct)
+export default StoreProduct
