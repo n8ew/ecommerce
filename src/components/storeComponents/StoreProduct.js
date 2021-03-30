@@ -1,6 +1,6 @@
 import React from 'react'
 import { useDispatch } from 'react-redux'
-import { setCurrentProduct } from '../../actions/productsActions'
+import { setCurrentProduct } from '../../redux/products/productsActions'
 import { useHistory } from 'react-router-dom'
 
 const StoreProduct = ({ product }) => {

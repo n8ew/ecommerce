@@ -1,0 +1,55 @@
+nav {
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content {
+    width: 80vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.content h3 {
+    font-size: 32px;
+    cursor: pointer;
+}
+.content ul a {
+    text-decoration: none;
+    margin-right: 2rem;
+    padding: 0.5rem;
+    font-size: 24px;
+    color: black;
+}
+.content ul a:last-child {
+    margin-right: 0;
+    position: relative;
+}
+.content ul a i {
+    font-size: 32px;
+    position: relative;
+    transform: translateY(25%);
+}
+/* 
+    cartQuantiti
+*/
+.cartQuantiti {
+    position: absolute;
+    bottom: -30%;
+    left: 45%;
+    z-index: -1;
+}
+.cartQuantiti .holder {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(0,0,255,0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.cartQuantiti .holder p {
+    padding-bottom: 5px;
+    font-size: 20px;
+}

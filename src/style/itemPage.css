@@ -1,0 +1,52 @@
+#itemPage {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/* 
+    Top
+*/
+.top {
+    display: flex;
+    width: 80vw;
+    height: 70vh;
+}
+.top .imageBox {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.top .img {
+    width: 90%;
+    height: 90%;
+}
+.detalesBox {
+    padding-top: 5rem;
+}
+.detalesBox h2 {
+    font-size: 40px;
+}
+.detalesBox h3 {
+    font-size: 32px;
+}
+.detalesBox button {
+    margin-top: 15rem;
+    width: 200px;
+    height: 75px;
+    font-size: 24px;
+    cursor: pointer;
+}
+/* 
+    Bottom
+*/
+.bottom {
+    display: flex;
+    width: 80vh;
+}
+.bottom p {
+    font-size: 32px;
+}
