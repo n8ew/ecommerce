@@ -3,13 +3,15 @@ import { useSelector } from 'react-redux'
 import CartItem from '../CartComponents/CartItem'
 import '../../style/cartStyle.css'
 
-const getCartItems = state => state.cart
+const getCartItems = state => state.cart.items
+const cartTotal = state => state.cart.total
 
 const Cart = () => {
 
   const cartItems = useSelector(getCartItems)
+  const total = useSelector(cartTotal)
 
-  const cartItemList = cartItems ? cartItems.map(item => (<CartItem item={item} key={item.id} />)) : (<li>Your cart is empty</li>)
+  const cartItemList = cartItems.length > 0 ? cartItems.map(item => (<CartItem item={item} key={item.id} />)) : (<li className="empty">Your cart is empty...</li>)
 
   return (
     <div id="cart">
@@ -17,7 +19,8 @@ const Cart = () => {
         <ul>
           {cartItemList}
         </ul>
-          <button>Checkout</button>
+        <h3>Total: { total }</h3>
+        <button>Checkout</button>
       </div>
     </div>
   )

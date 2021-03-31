@@ -1,0 +1,47 @@
+.Shop {
+    width: 100vw;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+}
+/* 
+    StoreProductsCollection
+*/
+.StoreProductsCollection {
+    width: 70%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+.product {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.square {
+    width: 75%;
+    height: 40%;
+    box-shadow: 6px 6px 8px rgba(0, 0, 0, 0.7);
+    cursor: pointer;
+}
+.product h4 {
+    font-size: 32px;
+    margin: 32px 0 0 0;
+}
+.product h6 {
+    font-size: 24px;
+    margin: 16px 0;
+}
+.product button {
+    width: 150px;
+    height: 50px;
+    border: none;
+    font-size: 20px;
+    background-color: #E9897E;
+    box-shadow: 3px 3px 6px rgba(0,0,0,0.5);
+    cursor: pointer;
+}
+.product button:hover {
+    background-color: #fd9a8f;
+    box-shadow: 5px 5px 6px rgba(0,0,0,0.5);
+}

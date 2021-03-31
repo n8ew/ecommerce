@@ -1,12 +1,12 @@
 import React from 'react'
 import StoreProductsCollection from '../storeComponents/StoreProductsCollection'
+import '../../style/shop.css'
 
 
-const Shop = ({ products }) => {
+const Shop = () => {
 
   return (
-    <div>
-      This is ShopPage
+    <div className="Shop">
       <StoreProductsCollection />
     </div>
   )

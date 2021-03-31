@@ -9,15 +9,10 @@ const StoreProductsCollection = () => {
   const products = useSelector(selectProducts)
 
   return (
-    <div style={grid}>
+    <div className="StoreProductsCollection">
       {products.map(product => <StoreProduct key={product.id} product={product}/>)}
     </div>
   )
-}
-
-const grid = {
-    display: "grid",
-    gridTemplateColumns: "repeat(3,1fr)"
 }
 
 export default StoreProductsCollection

@@ -14,20 +14,13 @@ const StoreProduct = ({ product }) => {
     }
 
   return (
-    <div className="product" style={styles}>
-      <div className="squer" style={{ width: "100px", height: "100px", backgroundColor: `${product.color}` }}></div>
+    <div className="product" >
+      <div className="square" onClick={ handleClick } style={{ backgroundColor: `${product.color}` }}></div>
         <h4>{product.head}</h4>
         <h6>Price: {product.price}</h6>
         <button onClick={ handleClick } >Click</button>
     </div>
   )
-}
-
-const styles = {
-    display: "flex",
-    flexDirection: "column",
-    justifyContent: "center",
-    alignItems: "center"
 }
 
 export default StoreProduct

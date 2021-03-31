@@ -8,7 +8,7 @@ const setProduct = state => state.products.product
 
 const ItemPage = () => {
 
-    const [quantity,setQuantity] = useState(0)
+    const [quantity,setQuantity] = useState(1)
 
     const dispatch = useDispatch()
     const product = useSelector(setProduct)
@@ -19,8 +19,9 @@ const ItemPage = () => {
     }
 
     const handleClick = () => {
-        product.quantity = quantity
-        dispatch(addToCart(product))
+        const total = quantity * product.price
+        product.quantity = parseInt(quantity)
+        dispatch(addToCart(product, total))
         history.push('/cart')
     }
 
