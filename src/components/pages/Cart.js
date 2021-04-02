@@ -3,13 +3,19 @@ import { useSelector } from 'react-redux'
 import CartItem from '../CartComponents/CartItem'
 import '../../style/cartStyle.css'
 
-const getCartItems = state => state.cart.items
+const getCartItems = state => state.cart
 
 const Cart = () => {
 
   const cartItems = useSelector(getCartItems)
 
-  const cartItemList = cartItems.length > 0 ? cartItems.map(item => (<CartItem item={item} key={item.id} />)) : (<li className="empty">Your cart is empty...</li>)
+  const cartItemList = cartItems.length > 0 ?cartItems.map(item => (<CartItem item={item} key={item.id} />)) : (<li className="empty">Your cart is empty...</li>)
+
+  const getTotal = () => {
+    let total = 0
+    cartItems.map(item => total += item.total)
+    return total
+  }
 
   return (
     <div id="cart">
@@ -17,7 +23,7 @@ const Cart = () => {
         <ul>
           {cartItemList}
         </ul>
-        <h3>Total: £00 </h3>
+        <h3>Total: £{ getTotal() } </h3>
         <button>Checkout</button>
       </div>
     </div>

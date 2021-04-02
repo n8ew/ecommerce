@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
 import { useHistory } from 'react-router-dom'  
 import { useSelector, useDispatch } from 'react-redux'
-import { addToCart } from '../../redux/cart/cartActions'
+import { addToCart, updateItem } from '../../redux/cart/cartActions'
 import '../../style/itemPage.css'
 
 const setProduct = state => state.products.product
+const getCartItems = state => state.cart
 
 const ItemPage = () => {
 
@@ -12,14 +13,29 @@ const ItemPage = () => {
 
     const dispatch = useDispatch()
     const product = useSelector(setProduct)
+    const cartItems = useSelector(getCartItems)
     const history = useHistory()
 
     const handleClick = () => {
-        const total = quantity * product.price
-        product.total = total
-        product.quantity = parseInt(quantity)
-        dispatch(addToCart(product))
-        history.push('/cart')
+
+        if(quantity > 0) {
+
+            const total = quantity * product.price
+            product.total = total
+            product.quantity = quantity
+
+
+            const itemToCheck = cartItems.filter(i => i.id === product.id)
+            if(itemToCheck.length === 0) {
+                dispatch(addToCart(product))
+                history.push('/cart')
+            } else {
+                dispatch(updateItem(itemToCheck[0]))
+                history.push('/cart')
+            }
+
+        }
+
     }
     const addToQuantity = () => {
         setQuantity(quantity + 1)
