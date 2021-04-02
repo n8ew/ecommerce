@@ -12,7 +12,7 @@ const Navbar = () => {
   const cartQuantiti = useSelector(selectCart).length
 
   const handleClick = () => {
-    history.push('/shop')
+    history.push('/')
   }
 
   return (
@@ -20,7 +20,7 @@ const Navbar = () => {
       <div className="content">
         <h3 onClick={ handleClick }>SQUARE Store</h3>
         <ul>
-          <Link to="/shop">Shop</Link>
+          <Link to="/">Shop</Link>
           <Link to="/about">About</Link>
           <Link to="/cart">
             <i className="material-icons">shopping_cart</i>

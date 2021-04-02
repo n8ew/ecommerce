@@ -4,12 +4,10 @@ import CartItem from '../CartComponents/CartItem'
 import '../../style/cartStyle.css'
 
 const getCartItems = state => state.cart.items
-const cartTotal = state => state.cart.total
 
 const Cart = () => {
 
   const cartItems = useSelector(getCartItems)
-  const total = useSelector(cartTotal)
 
   const cartItemList = cartItems.length > 0 ? cartItems.map(item => (<CartItem item={item} key={item.id} />)) : (<li className="empty">Your cart is empty...</li>)
 
@@ -19,7 +17,7 @@ const Cart = () => {
         <ul>
           {cartItemList}
         </ul>
-        <h3>Total: { total }</h3>
+        <h3>Total: £00 </h3>
         <button>Checkout</button>
       </div>
     </div>

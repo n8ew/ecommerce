@@ -1,19 +1,20 @@
-export const addToCart = (element, total) => {
+export const addToCart = element => {
     return {
         type: "cart/addToCart",
-        payload: {
-            item: element,
-            total
-        }
+        payload: element
     }
 }
 
-export const removeItem = (id, itemTotal) => {
+export const removeItem = id => {
     return {
         type: "cart/removeItem",
-        payload: {
-            id,
-            total: itemTotal
-        }
+        payload: id
+    }
+}
+
+export const updateItem = item => {
+    return {
+        type: "cart/updateItem",
+        payload: item
     }
 }

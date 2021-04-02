@@ -34,6 +34,22 @@
 .detalesBox h3 {
     font-size: 32px;
 }
+.detalesBox .select {
+    display: flex;
+    align-items: center;
+}
+.select .changeBox {
+    margin-left: 20px;
+}
+.changeBox i {
+    font-size: 32px;
+    padding: 5px;
+    cursor: pointer;
+    border: 1px solid black;
+}
+.changeBox i:last-child{
+    margin-left: 10px;
+}
 .detalesBox button {
     margin-top: 10rem;
     width: 200px;

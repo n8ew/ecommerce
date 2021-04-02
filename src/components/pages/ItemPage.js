@@ -14,15 +14,18 @@ const ItemPage = () => {
     const product = useSelector(setProduct)
     const history = useHistory()
 
-    const handleChange = e => {
-        setQuantity(e.target.value)
-    }
-
     const handleClick = () => {
         const total = quantity * product.price
+        product.total = total
         product.quantity = parseInt(quantity)
-        dispatch(addToCart(product, total))
+        dispatch(addToCart(product))
         history.push('/cart')
+    }
+    const addToQuantity = () => {
+        setQuantity(quantity + 1)
+    }
+    const subtrackFromQuantity = () => {
+        quantity > 0 && setQuantity(quantity - 1)
     }
 
     return (
@@ -35,8 +38,12 @@ const ItemPage = () => {
                     <h2>{product.head}</h2>
                     <h3>Price: £{product.price}</h3>
                     <div className="select">
-                        <h3>Quantity:</h3>
-                        <input type="number" value={quantity} onChange={ handleChange } />
+                        <h3>Quantity: { quantity }</h3>
+                        <div className="changeBox">
+                            <i className="material-icons" onClick={ addToQuantity }>arrow_drop_up</i>
+                            <i className="material-icons" onClick={ subtrackFromQuantity }>arrow_drop_down</i>
+                        </div>
+                        
                     </div>
                     <button onClick={ handleClick }>BUY</button>
                 </div>

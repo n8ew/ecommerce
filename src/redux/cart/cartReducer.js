@@ -1,6 +1,5 @@
 const initialState = {
     items: [],
-    total: 0
 }
 
 const cartReducer = (state = initialState, action) => {
@@ -9,8 +8,7 @@ const cartReducer = (state = initialState, action) => {
         case "cart/addToCart" : 
             return {
                 state,
-                items: [...state.items, action.payload.item],
-                total: state.total += action.payload.total
+                items: [...state.items, action.payload]
             }
         
             
@@ -18,8 +16,20 @@ const cartReducer = (state = initialState, action) => {
 
             return {
                 ...state,
-                items: state.items.filter(item => item.id !== action.payload.id),
-                total: state.total -= action.payload.total
+                items: state.items.filter(item => item.id !== action.payload)
+            }
+
+        case "cart/updateItem" :
+
+            return {
+                ...state,
+                items: state.items.map(item => {
+                    if(item.id === action.payload.id) {
+                        return action.payload
+                    } else {
+                        return item
+                    }
+                })
             }
         
 
