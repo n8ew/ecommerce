@@ -1,0 +1,22 @@
+.footer {
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #333;
+    position: relative;
+}
+.footer p {
+    color: #eee;
+    font-size: 18px;
+}
+.footer a {
+    position: absolute;
+    right: 50px;
+}
+.footer i {
+    font-size: 32px;
+    color: #eee;
+    cursor: pointer;
+}

@@ -3,9 +3,10 @@
 */
 #cart {
     width: 100vw;
+    min-height: 90vh;
+    margin-top: 50px;
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 .container {
     width: 80%;
@@ -20,15 +21,17 @@
     list-style: none;
     padding: 20px;
 }
-.container h3 {
+#cart .total {
     font-size: 32px;
-    margin-left: 4%;
+    align-self:flex-end;
+    margin-right: 7rem;
 }
 .container button {
     width: 200px;
     height: 75px;
     font-size: 30px;
-    margin: 4%;
+    margin-right: 7rem;
+    align-self:flex-end;
 }
 /* ##########
     CartItem
@@ -96,4 +99,41 @@
 #cartItem .remove:hover {
     color: red;
     border-color: red;
+}
+/*  ###########
+    CheckOutMsg
+    ########### */
+.checkOutMsg {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0,0.7);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.checkOutMsg .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #eee;
+    width: 60%;
+    height: 50vh;
+    position: relative;
+}
+.checkOutMsg .heading {
+    font-size: 48px;
+}
+.checkOutMsg p {
+    font-size: 24px;
+}
+.checkOutMsg i {
+    cursor: pointer;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    font-size: 32px;
 }

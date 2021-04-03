@@ -7,6 +7,7 @@ import Cart from './components/pages/Cart'
 import ItemPage from './components/pages/ItemPage'
 
 import Navbar from './components/ui/Navbar'
+import Footer from './components/ui/Footer'
 
 import './App.css';
 
@@ -21,6 +22,7 @@ function App() {
           <Route path="/cart" component={Cart} />
           <Route path="/:item_id" component={ItemPage} />
         </Switch>
+        <Footer />
       </div>
     </Router>
   );
