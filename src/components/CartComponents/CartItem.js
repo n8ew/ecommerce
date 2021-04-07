@@ -28,18 +28,22 @@ const CartItem = ({ item }) => {
     return (
         <li id="cartItem">
             <div className="img" style={{ backgroundColor: `${item.color}`}}></div>
-            <h3>{ item.head }</h3>
-            <div className="numbers">
-                <h5>Price: { item.price }</h5>
-                <div className="quantity">
-                    <h5>Quantity: { item.quantity }</h5>
-                    <div className="changeBox">
-                        <i className="material-icons icon" onClick={ addToQuantity }>arrow_drop_up</i>
-                        <i className="material-icons icon" onClick={ subtrackFromQuantity }>arrow_drop_down</i>
+            <div className="contant">
+                <div className="detales">
+                    <h3>{ item.head }</h3>
+                    <div className="numbers">
+                        <h5>Price: £{ item.price }</h5>
+                        <div className="quantity">
+                            <h5>Quantity: { item.quantity }</h5>
+                            <div className="changeBox">
+                                <i className="material-icons icon" onClick={ addToQuantity }>arrow_drop_up</i>
+                                <i className="material-icons icon" onClick={ subtrackFromQuantity }>arrow_drop_down</i>
+                            </div>
+                        </div>
                     </div>
                 </div>
+                <h4>£ { item.total }</h4>
             </div>
-            <h4>Total: { item.total }</h4>
             <i className="material-icons remove" onClick={ handleClick }>clear</i>
         </li>
     )

@@ -51,15 +51,16 @@ const ItemPage = () => {
                     <div className="img" style={{backgroundColor: `${product.color}`}}></div>
                 </div>
                 <div className="detalesBox">
-                    <h2>{product.head}</h2>
-                    <h3>Price: £{product.price}</h3>
+                    <div className="detale_heading">
+                        <h2>{product.head}</h2>
+                        <h3>Price: £{product.price}</h3>
+                    </div>
                     <div className="select">
                         <h3>Quantity: { quantity }</h3>
                         <div className="changeBox">
                             <i className="material-icons" onClick={ addToQuantity }>arrow_drop_up</i>
                             <i className="material-icons" onClick={ subtrackFromQuantity }>arrow_drop_down</i>
                         </div>
-                        
                     </div>
                     <button onClick={ handleClick }>BUY</button>
                 </div>

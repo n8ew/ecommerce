@@ -1,0 +1,202 @@
+*{
+   color: #081C15 ;
+}
+body {
+   background-color: #ffffff ;
+}
+.AboutPage {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   min-height: 65.2vh;
+
+}
+
+/* 
+    MEDIA QUERY
+*/
+@media only screen and (min-width: 1200px) {
+   .Shop .StoreProductsCollection {
+       grid-template-columns: repeat(4, 1fr);
+   }
+}
+
+
+@media only screen and (max-width: 967px) {
+   .Shop .StoreProductsCollection {
+       grid-template-columns: repeat(2, 1fr);
+   }
+   nav .content {
+      width: 90%;
+   }
+   nav .content ul {
+      padding: 0;
+   }
+   nav .content h3,
+   nav .content ul a i{
+      font-size: 24px;
+   }
+   nav .content ul a{
+      font-size: 18px;
+   }
+   .cartQuantiti .holder {
+      width: 30px;
+      height: 30px;
+   }
+   .cartQuantiti .holder p {
+      font-size: 16px;
+   }
+   #itemPage .top {
+      width: 90vw;
+   }
+   .top .img {
+      width: 90%;
+   }
+   #itemPage .top .detalesBox{
+      width: 40%;
+   }
+   #itemPage .top .detalesBox .detale_heading {
+      flex-direction: column;
+   }
+   #itemPage .top .detalesBox .detale_heading h2 {
+      font-size: 26px;
+   }
+   #itemPage .top .detalesBox .select {
+      flex-direction: column;
+      width: 100%;
+   }
+   #itemPage .top .detalesBox .select h3 {
+      margin: 10px 0 0 0 ;
+   }
+   #itemPage .top .detalesBox .select .changeBox {
+      margin: 0;
+   }
+   #cart .container {
+      flex-direction: column;
+      align-items: center;
+   }
+   #cart .container ul {
+      width: 90%;
+      padding: 0;
+   }
+   #cart .container .summary {
+      width: 90%;
+      margin: 2rem 0;
+   }
+   #cart .summary .cartInformations,
+   #cart .summary .buttons {
+      flex-direction: row;
+      justify-content: space-between;
+   }
+}
+@media only screen and (max-width: 480px) {
+   .Shop .StoreProductsCollection {
+       grid-template-columns: 1fr;
+   }
+   nav .content{
+      flex-direction: column;
+      justify-content: center;
+   }
+   nav .content h3 {
+      margin: 10px;
+   }
+   nav .content ul {
+      display: flex;
+      justify-content: space-between;
+      width: 90%;
+   }
+   .footer {
+      flex-direction: column;
+   }
+   .footer p {
+      font-size: 16px;
+   }
+   .footer a {
+      position: initial;
+      margin: 10px 0 20px 0;
+   }
+   #itemPage .top {
+      flex-direction: column;
+      width: 100%;
+      margin: 50px 0;
+   }
+   #itemPage .top .imageBox {
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+   }
+   #itemPage .top .img {
+      width: 300px ;
+      height: 300px ;
+   }
+   #itemPage .top .detalesBox {
+      width: 100%;
+   }
+   #itemPage .top .detalesBox .detale_heading {
+      width: 80%;
+      margin: 20px 0;
+      flex-direction: row;
+   }
+   .detalesBox .detale_heading h2 {
+      font-size: 24px;
+   }
+   .detalesBox .detale_heading h3 {
+      font-size: 16px;
+   }
+   #itemPage .top .detalesBox .select {
+      max-width: 80%;
+      flex-direction: row;
+      align-items: center;
+      margin: 0;
+      border: 1px solid red;
+   }
+   #itemPage .top .detalesBox .select h3{
+      margin: 0 50px 0 0;
+   }
+   .detalesBox button {
+      margin-bottom: 50px;
+   }
+   #itemPage .bottom {
+      margin-bottom: 50px;
+   }
+   #cart .container {
+      width: 100%;
+   }
+   #cart .container ul {
+      width: 100%;
+   }
+   #cart .container .summary{
+      width: 90%;
+   }
+   #cart .container .summary .cartInformations h3 {
+      font-size: 20px;
+   }
+   #cart button {
+      font-size: 20px;
+      height: 50px;
+      margin-top: 2rem;
+      width: 175px;
+   }
+   #cartItem .img { 
+      width: 50px ;
+      height: 50px;
+      margin-top: 10px;
+   }
+   #cartItem .contant {
+      width: 80%;
+      margin: 0;
+   }
+   #cartItem .contant .detales {
+      margin-left: 30px;
+   }
+   #cartItem .contant .detales h3 {
+      font-size: 18px;
+      margin-bottom: 10px;
+   }
+   #cartItem .contant .detales .numbers h5 {
+      font-size: 14px;
+   }
+   #cartItem .remove {
+      font-size: 18px;
+   }
+}

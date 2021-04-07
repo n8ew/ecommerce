@@ -1,5 +1,5 @@
 .Shop {
-    width: 100vw;
+    width: 100%;
     display: flex;
     justify-content: center;
     margin: 50px 0;
@@ -8,43 +8,55 @@
     StoreProductsCollection
 */
 .StoreProductsCollection {
-    width: 80%;
+    width: 90%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-gap: 50px 100px;
+    grid-gap: 50px 20px;
+    margin: 50px 0;
 }
 .product {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+}
+.product:hover {
+    box-shadow: 4px 4px 4px rgba(0,0,0,0.5),
+    -2px -2px 4px rgba(0,0,0,0.3);
+}
+.img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px;
+    width: 100%;
+    background-color: #efeffe;
 }
 .square {
-    width: 250px;
-    height: 250px;
+    width: 175px;
+    height: 175px;
     box-shadow: 6px 6px 8px rgba(0, 0, 0, 0.7);
     cursor: pointer;
-    margin-top: 50px;
+}
+.detales {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.description {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
 }
 .product h4 {
-    font-size: 32px;
-    margin: 10px 0 0 0;
+    font-size: 24px;
+    font-weight: 500;
+    margin: 10px;
 }
 .product h6 {
     font-size: 16px;
-    margin: 10px 0;
-}
-.product button {
-    width: 150px;
-    height: 50px;
-    border: none;
-    font-size: 20px;
-    background-color: #E9897E;
-    box-shadow: 3px 3px 6px rgba(0,0,0,0.5);
-    cursor: pointer;
-    margin-bottom: 50px;
-}
-.product button:hover {
-    background-color: #fd9a8f;
-    box-shadow: 5px 5px 6px rgba(0,0,0,0.5);
+    font-weight: 400;
+    margin: 10px;
 }

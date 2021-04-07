@@ -14,11 +14,16 @@ const StoreProduct = ({ product }) => {
     }
 
   return (
-    <div className="product" >
-      <div className="square" onClick={ handleClick } style={{ backgroundColor: `${product.color}` }}></div>
-        <h4>{product.head}</h4>
-        <h6>Price: {product.price}</h6>
-        <button onClick={ handleClick } >Click</button>
+    <div className="product" onClick={ handleClick }>
+      <div className="img">
+        <div className="square"  style={{ backgroundColor: `${product.color}` }}></div>
+      </div>
+      <div className="detales">
+        <div className="description">
+          <h4>{product.head}</h4>
+          <h6>Price: £{product.price}</h6>
+        </div>
+      </div>
     </div>
   )
 }

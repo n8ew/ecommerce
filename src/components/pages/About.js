@@ -2,7 +2,7 @@ import React from 'react'
 
 const About = () => {
   return (
-    <div style={ style }>
+    <div className="AboutPage" style={ style }>
       This is just frontend e commerce demo
     </div>
   )
