@@ -43,8 +43,8 @@ const CartItem = ({ item }) => {
                     </div>
                 </div>
                 <h4>£ { item.total }</h4>
+                <i className="material-icons remove" onClick={ handleClick }>clear</i>
             </div>
-            <i className="material-icons remove" onClick={ handleClick }>clear</i>
         </li>
     )
 }

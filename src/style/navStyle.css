@@ -6,7 +6,7 @@ nav {
     align-items: center;
     background-color: #f1f1fa;
 }
-.content {
+nav .content {
     width: 80vw;
     display: flex;
     justify-content: space-between;

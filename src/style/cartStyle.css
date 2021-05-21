@@ -14,6 +14,10 @@
 }
 .container ul {
     width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 .container ul .empty {
     font-size: 24px;
@@ -75,7 +79,6 @@
 #cartItem .img {
     width: 70px;
     height: 70px;
-    margin-left: 30px;
 }
 #cartItem .contant {
     display: flex;
@@ -131,7 +134,7 @@
     border: 2px solid black;
     cursor: pointer;
     position: absolute;
-    top: 10px;
+    top: 5px;
     right: 10px;
 }
 #cartItem .remove:hover {
