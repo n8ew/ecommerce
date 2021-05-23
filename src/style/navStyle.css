@@ -54,3 +54,43 @@ nav .content {
     padding-bottom: 5px;
     font-size: 20px;
 }
+/* 
+    Media Query
+*/
+@media (max-width: 967px) {
+    nav .content {
+       width: 90%;
+    }
+    nav .content ul {
+       padding: 0;
+    }
+    nav .content h3,
+    nav .content ul a i{
+       font-size: 24px;
+    }
+    nav .content ul a{
+       font-size: 18px;
+    }
+    .cartQuantiti .holder {
+       width: 30px;
+       height: 30px;
+    }
+    .cartQuantiti .holder p {
+       font-size: 16px;
+    }
+}
+@media (max-width: 480px) {
+    nav .content{
+       flex-direction: column;
+       justify-content: center;
+    }
+    nav .content h3 {
+       margin-top: 40px;
+    }
+    nav .content ul {
+       display: flex;
+       justify-content: space-between;
+       width: 90%;
+       margin: 0;
+    }
+}

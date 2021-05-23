@@ -20,3 +20,19 @@
     color: #eee;
     cursor: pointer;
 }
+/* 
+    Media Query
+*/
+@media (max-width: 480px) {
+    .footer {
+       flex-direction: column;
+    }
+    .footer p {
+       font-size: 16px;
+       width: 75%;
+    }
+    .footer a {
+       position: initial;
+       margin: 10px 0 20px 0;
+    }
+}

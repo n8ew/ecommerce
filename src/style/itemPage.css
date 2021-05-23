@@ -90,8 +90,88 @@
     width: 80vw;
 }
 .bottom p {
-    width: 100%;
     font-size: 20px;
     line-height: 32px;
     letter-spacing: 2px;
+}
+/*  ############
+    Media  Query
+    ############  */
+@media (max-width: 967px) {
+    #itemPage .top {
+        width: 90vw;
+        height: 50vh;
+    }
+    .top .img {
+       width: 400px;
+       height: 400px;
+    }
+    #itemPage .top .detalesBox{
+       width: 40%;
+    }
+    #itemPage .top .detalesBox .detale_heading {
+        flex-direction: column;
+    }
+    #itemPage .top .detalesBox .detale_heading h2 {
+        font-size: 26px;
+    }
+    #itemPage .top .detalesBox .select {
+        flex-direction: column;
+        width: 100%;
+    }
+    #itemPage .top .detalesBox .select h3 {
+        margin: 10px 0 0 0 ;
+    }
+    #itemPage .top .detalesBox .select .changeBox {
+        margin: 0;
+    }
+}
+@media (max-width: 480px) {
+    #itemPage .top {
+        flex-direction: column;
+        width: 100%;
+        margin: 50px 0;
+    }
+    #itemPage .top .imageBox {
+       width: 100%;
+       justify-content: center;
+       align-items: center;
+    }
+    #itemPage .top .img {
+       width: 300px ;
+       height: 300px ;
+    }
+    #itemPage .top .detalesBox {
+       width: 100%;
+    }
+    #itemPage .top .detalesBox .detale_heading {
+       width: 80%;
+       margin: 20px 0;
+       flex-direction: row;
+    }
+    .detalesBox .detale_heading h2 {
+       font-size: 24px;
+    }
+    .detalesBox .detale_heading h3 {
+       font-size: 16px;
+    }
+    #itemPage .top .detalesBox .select {
+       max-width: 80%;
+       flex-direction: row;
+       align-items: center;
+       margin: 0;
+    }
+    #itemPage .top .detalesBox .select h3{
+       margin: 0 50px 0 0;
+    }
+    .detalesBox button {
+       margin-bottom: 50px;
+    }
+    #itemPage .bottom {
+       margin-bottom: 50px;
+       margin-top: 9rem ;
+    }
+    #itemPage .bottom > p {
+       font-size: 16px;
+    }
 }

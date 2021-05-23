@@ -60,3 +60,21 @@
     font-weight: 400;
     margin: 10px;
 }
+/*  ###########
+    Media Query
+    ###########*/
+@media only screen and (min-width: 1200px) {
+    .Shop .StoreProductsCollection {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+@media (max-width: 967px) {
+    .Shop .StoreProductsCollection {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 480px) {
+    .Shop .StoreProductsCollection {
+        grid-template-columns: 1fr;
+    }
+}
