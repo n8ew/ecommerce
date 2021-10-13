@@ -16,6 +16,14 @@ const ItemPage = () => {
     const cartItems = useSelector(getCartItems)
     const history = useHistory()
 
+    // Define border radius for .producImg
+    const borderRadius = () => {
+        if(product.shape !== "square") {
+        return "50%"
+        }
+        return "0%"
+    }
+
     const handleClick = () => {
 
         if(quantity > 0) {
@@ -48,7 +56,7 @@ const ItemPage = () => {
         <div id="itemPage">
             <div className="top">
                 <div className="imageBox">
-                    <div className="img" style={{backgroundColor: `${product.color}`}}></div>
+                    <div className="img" style={{backgroundColor: `${product.color}`, borderRadius: borderRadius()}}></div>
                 </div>
                 <div className="detalesBox">
                     <div className="detale_heading">

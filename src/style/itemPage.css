@@ -11,18 +11,18 @@
 .top {
     display: flex;
     width: 80vw;
-    height: 70vh;
+    margin: 100px 0;
 }
 .top .imageBox {
     width: 70%;
+    padding-left: 10%;
     height: 100%;
     display: flex;
-    justify-content: flex-start;
     align-items: center;
 }
 .top .img {
-    width: 40vw;
-    height: 80%;
+    width: 300px;
+    height: 300px;
     box-shadow: 8px 8px 16px rgba(0,0,0,0.7);
 }
 .detalesBox {
@@ -49,14 +49,17 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 60%;
-    border-radius: 40px;
+    width: 300px;
+    border-radius: 20px;
     background-color: #f1f1fa;
     margin: 50px 0 30px 0;
 }
 .detalesBox .select:hover,
 .detalesBox button{
     box-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+.select h3 {
+    font-weight: 400;
 }
 .select .changeBox {
     margin-left: 40px;
@@ -73,11 +76,11 @@
 }
 .detalesBox button {
     margin-top: 2rem;
-    width: 80%;
-    border-radius: 40px;
+    width: 300px;
+    border-radius: 20px;
     background-color: #f1f1fa;
-    height: 75px;
-    font-size: 24px;
+    height: 50px;
+    font-size: 18px;
     letter-spacing: 4px;
     cursor: pointer;
     border: none;
@@ -97,80 +100,87 @@
 /*  ############
     Media  Query
     ############  */
+@media (min-width: 1200px) {
+    .top {
+        width: 950px;
+    }
+    .bottom {
+        width: 900px;
+    }
+}
 @media (max-width: 967px) {
     #itemPage .top {
         width: 90vw;
         height: 50vh;
     }
     .top .img {
-       width: 400px;
-       height: 400px;
+       width: 250px;
+       height: 250px;
     }
     #itemPage .top .detalesBox{
-       width: 40%;
+       width: 80%;
     }
     #itemPage .top .detalesBox .detale_heading {
-        flex-direction: column;
+        flex-direction: row;
     }
     #itemPage .top .detalesBox .detale_heading h2 {
         font-size: 26px;
     }
     #itemPage .top .detalesBox .select {
-        flex-direction: column;
-        width: 100%;
-    }
-    #itemPage .top .detalesBox .select h3 {
-        margin: 10px 0 0 0 ;
-    }
-    #itemPage .top .detalesBox .select .changeBox {
-        margin: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 260px;
+        height: 50px;
+        padding: 0 20px 0 20px;
     }
 }
-@media (max-width: 480px) {
+@media (max-width: 790px) {
     #itemPage .top {
         flex-direction: column;
-        width: 100%;
-        margin: 50px 0;
+        align-items: center;
+        max-width: 100%;
+        min-width: 100%;
+        margin: 75px 0;
     }
     #itemPage .top .imageBox {
-       width: 100%;
-       justify-content: center;
-       align-items: center;
-    }
-    #itemPage .top .img {
-       width: 300px ;
-       height: 300px ;
-    }
-    #itemPage .top .detalesBox {
-       width: 100%;
-    }
-    #itemPage .top .detalesBox .detale_heading {
-       width: 80%;
-       margin: 20px 0;
-       flex-direction: row;
-    }
-    .detalesBox .detale_heading h2 {
-       font-size: 24px;
-    }
-    .detalesBox .detale_heading h3 {
-       font-size: 16px;
-    }
-    #itemPage .top .detalesBox .select {
-       max-width: 80%;
-       flex-direction: row;
-       align-items: center;
-       margin: 0;
-    }
-    #itemPage .top .detalesBox .select h3{
-       margin: 0 50px 0 0;
-    }
-    .detalesBox button {
-       margin-bottom: 50px;
-    }
-    #itemPage .bottom {
-       margin-bottom: 50px;
-       margin-top: 9rem ;
-    }
+        max-width: 100%;
+        padding: 0;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 20px;
+     }
+     #itemPage .top .img {
+        width: 250px ;
+        height: 250px ;
+     }
+     #itemPage .top .detalesBox {
+        width: 100%;
+     }
+     #itemPage .top .detalesBox .detale_heading {
+        width: 300px;
+        margin: 20px 0;
+        flex-direction: row;
+     }
+     .detalesBox .detale_heading h2 {
+        font-size: 24px;
+     }
+     .detalesBox .detale_heading h3 {
+        font-size: 16px;
+     }
+     #itemPage .top .detalesBox .select {
+        width: 260px;
+        flex-direction: row;
+        align-items: center;
+        margin: 0;
+     }
+     #itemPage .bottom {
+        margin-bottom: 50px;
+        margin-top: 9rem ;
+     }
+}
+@media (max-width: 480px) {
     #itemPage .bottom > p {
        font-size: 16px;
     }
