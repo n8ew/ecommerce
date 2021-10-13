@@ -1,4 +1,4 @@
-#Square Store project
+## Square Store project
 
 This is `React.js` single page application showcasing  e-commarce functionality.
 
