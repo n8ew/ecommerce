@@ -8,7 +8,7 @@ This is `React.js` single page application showcasing  e-commarce functionality.
 
 - to install dependencies
 
-`cd ecommerce`
+`cd squareStore`
 
 `npm run install`
 
