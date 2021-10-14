@@ -18,7 +18,7 @@ const SearchBar = ({setFilter}) => {
     const [inputValue, setInputValue] = useState('')
     useEffect(() => {
         setFilter(inputValue)
-    },[inputValue])
+    },[inputValue,setFilter])
 
     const handleClick = () => {
         setTimeout(() => {

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import SearchBar from '../storeComponents/SearchBar'
 import StoreProductsCollection from '../storeComponents/StoreProductsCollection'
 import '../../style/shop.css'

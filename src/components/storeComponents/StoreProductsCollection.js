@@ -13,6 +13,7 @@ const StoreProductsCollection = ({ filter }) => {
     if(product.head.slice(0, filterLength).toLowerCase() === filter.toLowerCase() || product.shape.slice(0, filterLength).toLowerCase() === filter.toLowerCase()) {
       return product
     }
+    return null
   })
 
   return (
